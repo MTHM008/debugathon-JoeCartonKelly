@@ -28,11 +28,11 @@ def fprime(x):
     return 3*x**2 + 8*x
 
 # set initial value
-x_initial = 0.1
+x_old = 0.1
 
 # perform 10 iterations of Newton's method, printing out 
 for i in range(10):
-    x_old = x_initial
     x_new = x_old - (f(x_old) / fprime(x_old))
-
+    x_old = x_new
+    
 print(i, x_new, f(x_new))
